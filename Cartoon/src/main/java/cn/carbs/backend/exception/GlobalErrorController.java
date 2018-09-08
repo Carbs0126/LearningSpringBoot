@@ -10,10 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by carbs on 2018/9/8.
  */
-//添加上这个controller后，就会跳转到相应的页面，使用注解 @Controller，返回  return "/401";
-//如果使用   @RestController 则返回对应的string
+//使用注解 @Controller，返回 "/401" 对应的页面
+//使用注解 @RestController，返回对应的string
+
 @RestController
-public class MainsiteErrorController implements ErrorController {
+public class GlobalErrorController implements ErrorController {
 
     @RequestMapping("/error")
     public String handleError(HttpServletRequest request){
